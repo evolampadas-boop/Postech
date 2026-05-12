@@ -1,0 +1,189 @@
+Exemplos pra testar a API (POST /predict)
+==========================================
+
+Como usar:
+- API rodando em http://localhost:8000 (docker compose up -d api)
+- Pelo navegador: abre http://localhost:8000/docs, vai no POST /predict,
+  "Try it out", cola um dos JSONs abaixo e "Execute".
+- PowerShell:
+    $json = Get-Content -Raw exemplo.json   # ou cola o JSON direto
+    Invoke-RestMethod -Uri http://localhost:8000/predict -Method Post -Body $json -ContentType "application/json"
+
+Os 5 exemplos vieram de linhas reais do dataset (data/breast_cancer.csv),
+por isso eu sei o diagnóstico verdadeiro de cada um — dá pra conferir se o
+modelo acertou. São 3 malignos e 2 benignos.
+
+
+### Teste 1 — diagnóstico real: Maligno
+{
+  "mean radius": 17.99,
+  "mean texture": 10.38,
+  "mean perimeter": 122.8,
+  "mean area": 1001.0,
+  "mean smoothness": 0.1184,
+  "mean compactness": 0.2776,
+  "mean concavity": 0.3001,
+  "mean concave points": 0.1471,
+  "mean symmetry": 0.2419,
+  "mean fractal dimension": 0.07871,
+  "radius error": 1.095,
+  "texture error": 0.9053,
+  "perimeter error": 8.589,
+  "area error": 153.4,
+  "smoothness error": 0.0064,
+  "compactness error": 0.04904,
+  "concavity error": 0.05373,
+  "concave points error": 0.01587,
+  "symmetry error": 0.03003,
+  "fractal dimension error": 0.00619,
+  "worst radius": 25.38,
+  "worst texture": 17.33,
+  "worst perimeter": 184.6,
+  "worst area": 2019.0,
+  "worst smoothness": 0.1622,
+  "worst compactness": 0.6656,
+  "worst concavity": 0.7119,
+  "worst concave points": 0.2654,
+  "worst symmetry": 0.4601,
+  "worst fractal dimension": 0.1189
+}
+
+
+### Teste 2 — diagnóstico real: Benigno
+{
+  "mean radius": 13.54,
+  "mean texture": 14.36,
+  "mean perimeter": 87.46,
+  "mean area": 566.3,
+  "mean smoothness": 0.09779,
+  "mean compactness": 0.08129,
+  "mean concavity": 0.06664,
+  "mean concave points": 0.04781,
+  "mean symmetry": 0.1885,
+  "mean fractal dimension": 0.05766,
+  "radius error": 0.2699,
+  "texture error": 0.7886,
+  "perimeter error": 2.058,
+  "area error": 23.56,
+  "smoothness error": 0.00846,
+  "compactness error": 0.0146,
+  "concavity error": 0.02387,
+  "concave points error": 0.01315,
+  "symmetry error": 0.0198,
+  "fractal dimension error": 0.0023,
+  "worst radius": 15.11,
+  "worst texture": 19.26,
+  "worst perimeter": 99.7,
+  "worst area": 711.2,
+  "worst smoothness": 0.144,
+  "worst compactness": 0.1773,
+  "worst concavity": 0.239,
+  "worst concave points": 0.1288,
+  "worst symmetry": 0.2977,
+  "worst fractal dimension": 0.07259
+}
+
+
+### Teste 3 — diagnóstico real: Maligno
+{
+  "mean radius": 21.16,
+  "mean texture": 23.04,
+  "mean perimeter": 137.2,
+  "mean area": 1404.0,
+  "mean smoothness": 0.09428,
+  "mean compactness": 0.1022,
+  "mean concavity": 0.1097,
+  "mean concave points": 0.08632,
+  "mean symmetry": 0.1769,
+  "mean fractal dimension": 0.05278,
+  "radius error": 0.6917,
+  "texture error": 1.127,
+  "perimeter error": 4.303,
+  "area error": 93.99,
+  "smoothness error": 0.00473,
+  "compactness error": 0.01259,
+  "concavity error": 0.01715,
+  "concave points error": 0.01038,
+  "symmetry error": 0.01083,
+  "fractal dimension error": 0.00199,
+  "worst radius": 29.17,
+  "worst texture": 35.59,
+  "worst perimeter": 188.0,
+  "worst area": 2615.0,
+  "worst smoothness": 0.1401,
+  "worst compactness": 0.26,
+  "worst concavity": 0.3155,
+  "worst concave points": 0.2009,
+  "worst symmetry": 0.2822,
+  "worst fractal dimension": 0.07526
+}
+
+
+### Teste 4 — diagnóstico real: Benigno
+{
+  "mean radius": 13.27,
+  "mean texture": 14.76,
+  "mean perimeter": 84.74,
+  "mean area": 551.7,
+  "mean smoothness": 0.07355,
+  "mean compactness": 0.05055,
+  "mean concavity": 0.03261,
+  "mean concave points": 0.02648,
+  "mean symmetry": 0.1386,
+  "mean fractal dimension": 0.05318,
+  "radius error": 0.4057,
+  "texture error": 1.153,
+  "perimeter error": 2.701,
+  "area error": 36.35,
+  "smoothness error": 0.00448,
+  "compactness error": 0.01038,
+  "concavity error": 0.01358,
+  "concave points error": 0.01082,
+  "symmetry error": 0.01069,
+  "fractal dimension error": 0.00144,
+  "worst radius": 16.36,
+  "worst texture": 22.35,
+  "worst perimeter": 104.5,
+  "worst area": 830.6,
+  "worst smoothness": 0.1006,
+  "worst compactness": 0.1238,
+  "worst concavity": 0.135,
+  "worst concave points": 0.1001,
+  "worst symmetry": 0.2027,
+  "worst fractal dimension": 0.06206
+}
+
+
+### Teste 5 — diagnóstico real: Maligno
+{
+  "mean radius": 18.94,
+  "mean texture": 21.31,
+  "mean perimeter": 123.6,
+  "mean area": 1130.0,
+  "mean smoothness": 0.09009,
+  "mean compactness": 0.1029,
+  "mean concavity": 0.108,
+  "mean concave points": 0.07951,
+  "mean symmetry": 0.1582,
+  "mean fractal dimension": 0.05461,
+  "radius error": 0.7888,
+  "texture error": 0.7975,
+  "perimeter error": 5.486,
+  "area error": 96.05,
+  "smoothness error": 0.00444,
+  "compactness error": 0.01652,
+  "concavity error": 0.02269,
+  "concave points error": 0.0137,
+  "symmetry error": 0.01386,
+  "fractal dimension error": 0.0017,
+  "worst radius": 24.86,
+  "worst texture": 26.58,
+  "worst perimeter": 165.9,
+  "worst area": 1866.0,
+  "worst smoothness": 0.1193,
+  "worst compactness": 0.2336,
+  "worst concavity": 0.2687,
+  "worst concave points": 0.1789,
+  "worst symmetry": 0.2551,
+  "worst fractal dimension": 0.06589
+}

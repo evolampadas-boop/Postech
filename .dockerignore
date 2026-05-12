@@ -1,0 +1,16 @@
+.venv
+venv
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.ipynb_checkpoints
+.git
+.gitignore
+.idea
+.vscode
+*.egg-info
+.DS_Store
+.env
+.coverage
+htmlcov

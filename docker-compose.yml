@@ -1,0 +1,23 @@
+services:
+  api:
+    build: .
+    container_name: tech-challenge-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  jupyter:
+    build: .
+    container_name: tech-challenge-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/app
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
+    environment:
+      - PYTHONUNBUFFERED=1
