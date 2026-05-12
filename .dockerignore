@@ -14,3 +14,11 @@ __pycache__
 .env
 .coverage
 htmlcov
+
+# Não vai pra imagem da API (só código + modelo são necessários)
+docs/
+notebooks/
+tests/
+*.pdf
+*.png
+roteiro_apresentacao.md

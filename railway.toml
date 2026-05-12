@@ -1,0 +1,11 @@
+# Configuração de deploy no Railway.
+# O build usa o Dockerfile do projeto; o start respeita a porta injetada em $PORT.
+
+[build]
+builder = "dockerfile"
+
+[deploy]
+startCommand = "uvicorn api.main:app --host 0.0.0.0 --port $PORT"
+healthcheckPath = "/"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure"
