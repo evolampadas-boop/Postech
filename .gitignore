@@ -45,3 +45,6 @@ logs/
 # Outputs de plots
 *.png
 !docs/*.png
+
+# HTML intermediário gerado ao montar o PDF do relatório
+docs/relatorio_tech_challenge.html

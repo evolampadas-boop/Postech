@@ -11,7 +11,8 @@ fontsize: 11pt
 ## Links
 
 - **Repositório:** <https://github.com/sandyLohran/Tech-Challenge-Fase-1-Diagn-stico-de-C-ncer-de-Mama-com-ML>
-- **Vídeo de demonstração:** *[inserir link do YouTube/Vimeo]*
+- **API em produção:** <https://postech-production.up.railway.app> — documentação interativa (Swagger) em <https://postech-production.up.railway.app/docs>
+- **Vídeo de demonstração:** <https://youtu.be/iGJay9R4Hkw>
 - **Dataset:** Breast Cancer Wisconsin (Diagnostic) — vem do `scikit-learn`; versão no Kaggle: <https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data>
 
 O repositório tem o código completo, o `README.md` com instruções, o `Dockerfile`, os 4 notebooks já executados, o modelo treinado e os testes.
@@ -155,4 +156,4 @@ Solução de ponta a ponta: EDA, pré-processamento com pipeline e split estrati
 
 ---
 
-**Repositório:** <https://github.com/sandyLohran/Tech-Challenge-Fase-1-Diagn-stico-de-C-ncer-de-Mama-com-ML> · **Vídeo:** *[inserir link]*
+**Repositório:** <https://github.com/sandyLohran/Tech-Challenge-Fase-1-Diagn-stico-de-C-ncer-de-Mama-com-ML> · **API:** <https://postech-production.up.railway.app/docs> · **Vídeo:** <https://youtu.be/iGJay9R4Hkw>
